@@ -41,7 +41,7 @@ Park.prototype.allDinosaurOfSpecies = function(species){
         allDinosOfKind.push(dinosaur)
     }
   }
-    return allDinosOfKind;
+    return allDinosOfKind.length;
 }
 
 Park.prototype.removeDinosaursOfKind = function(species){
