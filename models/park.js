@@ -70,6 +70,11 @@ Park.prototype.calculateYearlyRevenue = function(){
     return this.calculateNumberOfVisitorsPerYear() * this.price;
 }
 
-
+Park.prototype.getAllDiets = function(){
+  let allDiets = {};
+  for(let dinosaur of this.dinosaurs){
+    
+  }
+}
 
 module.exports = Park;

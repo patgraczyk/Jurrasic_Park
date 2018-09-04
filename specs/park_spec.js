@@ -93,4 +93,12 @@ describe('Park', function() {
     assert.strictEqual(actual, 1825000);
   });
 
+  it('should provide an object with diet types and the number of dinosaurs in the park of that diet type', function(){
+    park.addDinosaurs(dinosaur1);
+    park.addDinosaurs(dinosaur2);
+    park.addDinosaurs(dinosaur3);
+    const actual = park.getAllDiets():
+    assert.deepStrictEqual(actual, 1);
+  });
+
 });
