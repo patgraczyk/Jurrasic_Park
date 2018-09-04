@@ -54,5 +54,22 @@ Park.prototype.removeDinosaursOfKind = function(species){
   this.dinosaurs = dinosaoursLeft;
 }
 
+Park.prototype.calculateNumberOfVisitors = function(){
+  let totalVisitors = 0;
+  for (let dinosaur of this.dinosaurs){
+    totalVisitors = dinosaur.guestsAttractedPerDay += totalVisitors;
+  }
+  return totalVisitors;
+}
+
+Park.prototype.calculateNumberOfVisitorsPerYear = function(){
+  return this.calculateNumberOfVisitors() * 365;
+}
+
+Park.prototype.calculateYearlyRevenue = function(){
+    return this.calculateNumberOfVisitorsPerYear() * this.price;
+}
+
+
 
 module.exports = Park;
